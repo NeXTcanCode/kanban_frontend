@@ -3,7 +3,7 @@ import { getStoredToken } from "./authStorage";
 
 export const apiClient = axios.create({
   baseURL: import.meta.env.VITE_API_URL || "http://localhost:3000/api",
-  timeout: 10000
+  timeout: 60000
 });
 
 apiClient.interceptors.request.use((config) => {
